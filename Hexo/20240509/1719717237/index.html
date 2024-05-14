@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/smalljie.github.io/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/smalljie.github.io/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/smalljie.github.io/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/smalljie.github.io/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/smalljie.github.io/css/main.css">
+
+
+<link rel="stylesheet" href="/smalljie.github.io/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"smalljie373.github.io","root":"/smalljie.github.io/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="前言本系列文章旨在為那些想要開始架設自己部落格但卻不知從何著手的人提供指引。如果你對於如何開始使用 Hexo 有所困惑，這裡將為你提供一些合適的修改建議。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="試著用Hexo架設Blog(0)-目錄">
+<meta property="og:url" content="https://smalljie373.github.io/smalljie.github.io/Hexo/20240509/1719717237/index.html">
+<meta property="og:site_name" content="Smalljie的前端探索">
+<meta property="og:description" content="前言本系列文章旨在為那些想要開始架設自己部落格但卻不知從何著手的人提供指引。如果你對於如何開始使用 Hexo 有所困惑，這裡將為你提供一些合適的修改建議。">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-05-09T05:50:00.000Z">
+<meta property="article:modified_time" content="2024-05-12T12:38:38.877Z">
+<meta property="article:author" content="Smalljie">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://smalljie373.github.io/smalljie.github.io/Hexo/20240509/1719717237/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>試著用Hexo架設Blog(0)-目錄 | Smalljie的前端探索</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/smalljie.github.io/atom.xml" title="Smalljie的前端探索" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/smalljie.github.io/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Smalljie的前端探索</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">網頁開發與前端技術的探索之旅</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/smalljie.github.io/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/smalljie.github.io/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/smalljie.github.io/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/smalljie.github.io/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/smalljie.github.io/categories" rel="section"><i class="fa fa-th fa-fw fa-fw"></i>分類</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/smalljie373" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://smalljie373.github.io/smalljie.github.io/Hexo/20240509/1719717237/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/smalljie.github.io/images/avatar.gif">
+      <meta itemprop="name" content="Smalljie">
+      <meta itemprop="description" content="F2E-Front End Engineer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smalljie的前端探索">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          試著用Hexo架設Blog(0)-目錄
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2024-05-09 13:50:00" itemprop="dateCreated datePublished" datetime="2024-05-09T13:50:00+08:00">2024-05-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2024-05-12 20:38:38" itemprop="dateModified" datetime="2024-05-12T20:38:38+08:00">2024-05-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/smalljie.github.io/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本系列文章旨在為那些想要開始架設自己部落格但卻不知從何著手的人提供指引。如果你對於如何開始使用 Hexo 有所困惑，這裡將為你提供一些合適的修改建議。</p>
+<span id="more"></span>
+
+<h2 id="什麼是-Hexo？"><a href="#什麼是-Hexo？" class="headerlink" title="什麼是 Hexo？"></a>什麼是 Hexo？</h2><p>Hexo 是一款是基於 Node.js 所製作的網誌框架，它以快速、簡單和強大著稱。通過 Markdown 或其他渲染引擎，Hexo 能夠將您的文本內容迅速轉換為靜態網頁，讓您輕鬆在網絡上分享內容。</p>
+<h2 id="選擇-Hexo-的原因"><a href="#選擇-Hexo-的原因" class="headerlink" title="選擇 Hexo 的原因"></a>選擇 Hexo 的原因</h2><p>現今架設Blog的方法有上千種可行的做法。</p>
+<p>馬上能聯想到的平台有Wordpress、Medium、Blogger 等等超多種不同的選擇，那麼為什麼要選擇Hexo架設Blog呢?</p>
+<p>這邊稍微解釋一下，部落格平台提供了快速開始撰寫內容的便利，但也限制了使用者對於部落格的高度客製化。由於內容、SEO 設定以及版面風格等掌握在平台方手中，使用者可能會感到對於自己部落格的掌控不足。因此，儘管部落格平台提供了方便的主機、網域和 SEO 等解決方案，但這也意味著將自己的內容和品牌交由他人掌握。</p>
+<h3 id="那麼使用-Hexo-有什麼好處呢？"><a href="#那麼使用-Hexo-有什麼好處呢？" class="headerlink" title="那麼使用 Hexo 有什麼好處呢？"></a>那麼使用 Hexo 有什麼好處呢？</h3><ul>
+<li><p>快速建立： Hexo 是一個靜態網站生成器，它可以快速地將 Markdown 文件轉換為靜態網頁。這意味著你可以很快地建立起一個功能完整的部落格，而無需擔心後端伺服器的設置和管理。</p>
+</li>
+<li><p>簡單易用： Hexo 使用 Markdown 作為文章格式，這使得撰寫和管理文章變得非常簡單。此外，Hexo 還提供了豐富的主題和插件，可以輕鬆定製部落格的外觀和功能。</p>
+</li>
+<li><p>高度客製化： 儘管 Hexo 是一個靜態網站生成器，但它同樣也提供了許多客製化的選項。你可以根據自己的需求進行主題和佈局的設計，從而打造出獨一無二的部落格。</p>
+<ul>
+<li>但需掌握一定技術量。</li>
+</ul>
+</li>
+<li><p>性能優異： 由於 Hexo 生成的是靜態網頁，因此它的性能非常優異。靜態網頁不需要伺服器端的處理，所以加載速度更快，且對於流量暴增的情況也更具響應能力。</p>
+</li>
+<li><p>版本控制： 由於 Hexo 使用 Markdown 來撰寫文章，這意味著你可以將文章儲存在版本控制系統中，如 Git。這使得文章的版本管理和協作變得更加方便和安全。</p>
+</li>
+</ul>
+<h3 id="使用Hexo-架設的網站"><a href="#使用Hexo-架設的網站" class="headerlink" title="使用Hexo 架設的網站"></a>使用Hexo 架設的網站</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://vuejs.org/">Vue.js</a></li>
+<li><a target="_blank" rel="noopener" href="https://ckeditor.com/">CKEditor</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hexschool.com/">六角學院</a></li>
+</ul>
+<p>好處講完了，那壞處呢?</p>
+<ul>
+<li><p>技術門檻： 對於不熟悉命令行界面或基本網頁開發技術的使用者來說，Hexo 的學習曲線可能較為陡峭。設置、安裝主題和插件等過程需要一定的技術知識和理解能力。</p>
+</li>
+<li><p>主題和插件的限制： 儘管 Hexo 提供了許多主題和插件，但與其他部落格平台相比，它的選擇相對較少。這可能會限制使用者對於部落格外觀和功能的客製化。</p>
+</li>
+<li><p>靜態網頁的限制： Hexo 生成的部落格是靜態網頁，這意味著它缺乏一些動態交互和即時更新的功能。例如，無法在部落格中實現使用者的評論系統或即時通知功能。</p>
+</li>
+<li><p>自助管理的需求： Hexo 是一個自助管理的部落格系統，使用者需要負責部落格的運行、更新和維護。這需要使用者有一定的技術能力和時間投入，不適合那些希望無需太多技術操作即可運行部落格的用戶。</p>
+</li>
+<li><p>可能需要額外的成本： 雖然 Hexo 本身是免費的開源軟件，但如果想要使用自己的網域、定製主題或添加高級功能，可能需要支付額外的成本，例如購買網域、主機服務或者付費主題和插件。</p>
+</li>
+</ul>
+<p>以上是使用 Hexo 架設部落格的好處和壞處。雖然 Hexo 提供了快速建立、簡單易用以及高度客製化等優點，但也需要考慮到一些技術門檻、功能限制和自助管理的挑戰。儘管如此，我相信這些信息能夠幫助你更全面地了解 Hexo，如果你對於自己架設部落格感興趣，那就開始嘗試吧！</p>
+<h2 id="文章大綱"><a href="#文章大綱" class="headerlink" title="文章大綱"></a>文章大綱</h2><ul>
+<li><a href="https://smalljie373.github.io/smalljie.github.io/Hexo/20240511/1977565266/">試著用Hexo架設Blog(1)-如何安裝</a></li>
+</ul>
+<p>以上就是「嘗試使用 Hexo 架設部落格」系列文章的大綱。這些文章將涵蓋 Hexo 的基本介紹、架設步驟、主題和插件選擇、優化技巧等內容。透過這些文章，你將能夠全面了解如何使用 Hexo 架設自己的部落格，並獲得實用的技巧和建議。</p>
+<h2 id="參考文獻"><a href="#參考文獻" class="headerlink" title="參考文獻"></a>參考文獻</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://hackmd.io/@Heidi-Liu/note-hexo-github">如何使用 Hexo + GitHub Pages 架設個人網誌</a></li>
+<li><a target="_blank" rel="noopener" href="https://israynotarray.com/hexo/20200914/3741834499/">試著學 Hexo</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/smalljie.github.io/tags/Hexo/" rel="tag"># Hexo</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/smalljie.github.io/Javascript/20240504/2694164006/" rel="prev" title="JavaScript 核心觀念(3)-執行環境與作用域-語法作用域">
+      <i class="fa fa-chevron-left"></i> JavaScript 核心觀念(3)-執行環境與作用域-語法作用域
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/smalljie.github.io/Hexo/20240511/1977565266/" rel="next" title="試著用Hexo架設Blog(1)-如何安裝">
+      試著用Hexo架設Blog(1)-如何安裝 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-Hexo%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">什麼是 Hexo？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%B8%E6%93%87-Hexo-%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="nav-number">3.</span> <span class="nav-text">選擇 Hexo 的原因</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%82%A3%E9%BA%BC%E4%BD%BF%E7%94%A8-Hexo-%E6%9C%89%E4%BB%80%E9%BA%BC%E5%A5%BD%E8%99%95%E5%91%A2%EF%BC%9F"><span class="nav-number">3.1.</span> <span class="nav-text">那麼使用 Hexo 有什麼好處呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Hexo-%E6%9E%B6%E8%A8%AD%E7%9A%84%E7%B6%B2%E7%AB%99"><span class="nav-number">3.2.</span> <span class="nav-text">使用Hexo 架設的網站</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%A4%A7%E7%B6%B1"><span class="nav-number">4.</span> <span class="nav-text">文章大綱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E6%96%87%E7%8D%BB"><span class="nav-number">5.</span> <span class="nav-text">參考文獻</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Smalljie"
+      src="/smalljie.github.io/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Smalljie</p>
+  <div class="site-description" itemprop="description">F2E-Front End Engineer</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/smalljie.github.io/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/smalljie.github.io/categories">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/smalljie.github.io/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/smalljie373" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;smalljie373" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">若要轉載文章，麻煩請保留原作者名稱(smalljie)與原始連結(url)。</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/smalljie.github.io/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/smalljie.github.io/lib/velocity/velocity.min.js"></script>
+  <script src="/smalljie.github.io/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/smalljie.github.io/js/utils.js"></script>
+
+<script src="/smalljie.github.io/js/motion.js"></script>
+
+
+<script src="/smalljie.github.io/js/schemes/pisces.js"></script>
+
+
+<script src="/smalljie.github.io/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/smalljie.github.io/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
