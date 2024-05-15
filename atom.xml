@@ -3,11 +3,11 @@
   <title>Smalljie的前端探索</title>
   
   <subtitle>網頁開發與前端技術的探索之旅</subtitle>
-  <link href="https://smalljie373.github.io/smalljie.github.io/atom.xml" rel="self"/>
+  <link href="https://smalljiefrontend.com/atom.xml" rel="self"/>
   
-  <link href="https://smalljie373.github.io/smalljie.github.io/"/>
+  <link href="https://smalljiefrontend.com/"/>
   <updated>2024-05-14T14:56:38.221Z</updated>
-  <id>https://smalljie373.github.io/smalljie.github.io/</id>
+  <id>https://smalljiefrontend.com/</id>
   
   <author>
     <name>Smalljie</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>試著用Hexo架設Blog(1)-如何安裝</title>
-    <link href="https://smalljie373.github.io/smalljie.github.io/Hexo/20240511/1977565266/"/>
-    <id>https://smalljie373.github.io/smalljie.github.io/Hexo/20240511/1977565266/</id>
+    <link href="https://smalljiefrontend.com/Hexo/20240511/1977565266/"/>
+    <id>https://smalljiefrontend.com/Hexo/20240511/1977565266/</id>
     <published>2024-05-11T08:50:00.000Z</published>
     <updated>2024-05-14T14:56:38.221Z</updated>
     
@@ -30,17 +30,17 @@
     
     
     
-    <category term="Hexo" scheme="https://smalljie373.github.io/smalljie.github.io/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://smalljiefrontend.com/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://smalljie373.github.io/smalljie.github.io/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://smalljiefrontend.com/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>試著用Hexo架設Blog(0)-目錄</title>
-    <link href="https://smalljie373.github.io/smalljie.github.io/Hexo/20240509/1719717237/"/>
-    <id>https://smalljie373.github.io/smalljie.github.io/Hexo/20240509/1719717237/</id>
+    <link href="https://smalljiefrontend.com/Hexo/20240509/1719717237/"/>
+    <id>https://smalljiefrontend.com/Hexo/20240509/1719717237/</id>
     <published>2024-05-09T05:50:00.000Z</published>
     <updated>2024-05-14T14:56:18.932Z</updated>
     
@@ -51,17 +51,17 @@
     
     
     
-    <category term="Hexo" scheme="https://smalljie373.github.io/smalljie.github.io/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://smalljiefrontend.com/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="https://smalljie373.github.io/smalljie.github.io/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://smalljiefrontend.com/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript 核心觀念(3)-執行環境與作用域-語法作用域</title>
-    <link href="https://smalljie373.github.io/smalljie.github.io/Javascript/20240504/2694164006/"/>
-    <id>https://smalljie373.github.io/smalljie.github.io/Javascript/20240504/2694164006/</id>
+    <link href="https://smalljiefrontend.com/Javascript/20240504/2694164006/"/>
+    <id>https://smalljiefrontend.com/Javascript/20240504/2694164006/</id>
     <published>2024-05-04T11:30:00.000Z</published>
     <updated>2024-05-14T14:58:55.857Z</updated>
     
@@ -72,17 +72,17 @@
     
     
     
-    <category term="JavaScript" scheme="https://smalljie373.github.io/smalljie.github.io/categories/Javascript/"/>
+    <category term="JavaScript" scheme="https://smalljiefrontend.com/categories/Javascript/"/>
     
     
-    <category term="JavaScript" scheme="https://smalljie373.github.io/smalljie.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://smalljiefrontend.com/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript 核心觀念(2)-執行環境與作用域-執行的錯誤情境LHS與RHS</title>
-    <link href="https://smalljie373.github.io/smalljie.github.io/Javascript/20240428/1393512069/"/>
-    <id>https://smalljie373.github.io/smalljie.github.io/Javascript/20240428/1393512069/</id>
+    <link href="https://smalljiefrontend.com/Javascript/20240428/1393512069/"/>
+    <id>https://smalljiefrontend.com/Javascript/20240428/1393512069/</id>
     <published>2024-04-28T13:05:00.000Z</published>
     <updated>2024-05-14T14:58:31.611Z</updated>
     
@@ -93,17 +93,17 @@
     
     
     
-    <category term="JavaScript" scheme="https://smalljie373.github.io/smalljie.github.io/categories/Javascript/"/>
+    <category term="JavaScript" scheme="https://smalljiefrontend.com/categories/Javascript/"/>
     
     
-    <category term="JavaScript" scheme="https://smalljie373.github.io/smalljie.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://smalljiefrontend.com/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript 核心觀念(1)-執行環境與作用域-JavaScript運作方式</title>
-    <link href="https://smalljie373.github.io/smalljie.github.io/Javascript/20240422/4291132673/"/>
-    <id>https://smalljie373.github.io/smalljie.github.io/Javascript/20240422/4291132673/</id>
+    <link href="https://smalljiefrontend.com/Javascript/20240422/4291132673/"/>
+    <id>https://smalljiefrontend.com/Javascript/20240422/4291132673/</id>
     <published>2024-04-22T13:25:00.000Z</published>
     <updated>2024-05-14T14:58:14.458Z</updated>
     
@@ -114,17 +114,17 @@
     
     
     
-    <category term="JavaScript" scheme="https://smalljie373.github.io/smalljie.github.io/categories/Javascript/"/>
+    <category term="JavaScript" scheme="https://smalljiefrontend.com/categories/Javascript/"/>
     
     
-    <category term="JavaScript" scheme="https://smalljie373.github.io/smalljie.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://smalljiefrontend.com/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript 核心觀念(0)-目錄</title>
-    <link href="https://smalljie373.github.io/smalljie.github.io/Javascript/20240422/2405094525/"/>
-    <id>https://smalljie373.github.io/smalljie.github.io/Javascript/20240422/2405094525/</id>
+    <link href="https://smalljiefrontend.com/Javascript/20240422/2405094525/"/>
+    <id>https://smalljiefrontend.com/Javascript/20240422/2405094525/</id>
     <published>2024-04-22T09:32:14.000Z</published>
     <updated>2024-05-14T14:57:09.721Z</updated>
     
@@ -135,17 +135,17 @@
     
     
     
-    <category term="JavaScript" scheme="https://smalljie373.github.io/smalljie.github.io/categories/Javascript/"/>
+    <category term="JavaScript" scheme="https://smalljiefrontend.com/categories/Javascript/"/>
     
     
-    <category term="JavaScript" scheme="https://smalljie373.github.io/smalljie.github.io/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://smalljiefrontend.com/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>Markdown 基礎與入門教學</title>
-    <link href="https://smalljie373.github.io/smalljie.github.io/miscellaneous/20240406/482737823/"/>
-    <id>https://smalljie373.github.io/smalljie.github.io/miscellaneous/20240406/482737823/</id>
+    <link href="https://smalljiefrontend.com/miscellaneous/20240406/482737823/"/>
+    <id>https://smalljiefrontend.com/miscellaneous/20240406/482737823/</id>
     <published>2024-04-06T06:19:57.000Z</published>
     <updated>2024-05-12T02:53:42.945Z</updated>
     
@@ -156,17 +156,17 @@
     
     
     
-    <category term="雜談" scheme="https://smalljie373.github.io/smalljie.github.io/categories/miscellaneous/"/>
+    <category term="雜談" scheme="https://smalljiefrontend.com/categories/miscellaneous/"/>
     
     
-    <category term="Markdown" scheme="https://smalljie373.github.io/smalljie.github.io/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://smalljiefrontend.com/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>我的第一篇部落格文章</title>
-    <link href="https://smalljie373.github.io/smalljie.github.io/miscellaneous/20240101/2197251373/"/>
-    <id>https://smalljie373.github.io/smalljie.github.io/miscellaneous/20240101/2197251373/</id>
+    <link href="https://smalljiefrontend.com/miscellaneous/20240101/2197251373/"/>
+    <id>https://smalljiefrontend.com/miscellaneous/20240101/2197251373/</id>
     <published>2024-01-01T09:32:14.000Z</published>
     <updated>2024-05-12T02:53:42.946Z</updated>
     
@@ -180,10 +180,10 @@
     
     
     
-    <category term="雜談" scheme="https://smalljie373.github.io/smalljie.github.io/categories/miscellaneous/"/>
+    <category term="雜談" scheme="https://smalljiefrontend.com/categories/miscellaneous/"/>
     
     
-    <category term="雜談" scheme="https://smalljie373.github.io/smalljie.github.io/tags/%E9%9B%9C%E8%AB%87/"/>
+    <category term="雜談" scheme="https://smalljiefrontend.com/tags/%E9%9B%9C%E8%AB%87/"/>
     
   </entry>
   
