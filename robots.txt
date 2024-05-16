@@ -8,3 +8,4 @@ Allow: /links/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
+Sitemap: /sitemap.xml

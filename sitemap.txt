@@ -14,9 +14,9 @@ https://smalljiefrontend.com/tags/index.html
 https://smalljiefrontend.com/categories/index.html
 https://smalljiefrontend.com/
 https://smalljiefrontend.com/tags/Hexo/
+https://smalljiefrontend.com/tags/JavaScript/
 https://smalljiefrontend.com/tags/%E9%9B%9C%E8%AB%87/
 https://smalljiefrontend.com/tags/Markdown/
-https://smalljiefrontend.com/tags/JavaScript/
 https://smalljiefrontend.com/categories/Hexo/
-https://smalljiefrontend.com/categories/miscellaneous/
 https://smalljiefrontend.com/categories/Javascript/
+https://smalljiefrontend.com/categories/miscellaneous/
