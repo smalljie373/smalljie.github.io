@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://smalljiefrontend.com/Hexo/20240516/3418237258/</loc>
+    
+    <lastmod>2024-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://smalljiefrontend.com/googlecd3375785374067b.html</loc>
     
     <lastmod>2024-05-16</lastmod>
@@ -130,7 +139,7 @@
 
   <url>
     <loc>https://smalljiefrontend.com/</loc>
-    <lastmod>2024-05-16</lastmod>
+    <lastmod>2024-05-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -138,28 +147,28 @@
   
   <url>
     <loc>https://smalljiefrontend.com/tags/Hexo/</loc>
-    <lastmod>2024-05-16</lastmod>
+    <lastmod>2024-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smalljiefrontend.com/tags/JavaScript/</loc>
-    <lastmod>2024-05-16</lastmod>
+    <lastmod>2024-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smalljiefrontend.com/tags/%E9%9B%9C%E8%AB%87/</loc>
-    <lastmod>2024-05-16</lastmod>
+    <lastmod>2024-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smalljiefrontend.com/tags/Markdown/</loc>
-    <lastmod>2024-05-16</lastmod>
+    <lastmod>2024-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -168,21 +177,21 @@
   
   <url>
     <loc>https://smalljiefrontend.com/categories/Hexo/</loc>
-    <lastmod>2024-05-16</lastmod>
+    <lastmod>2024-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smalljiefrontend.com/categories/Javascript/</loc>
-    <lastmod>2024-05-16</lastmod>
+    <lastmod>2024-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://smalljiefrontend.com/categories/miscellaneous/</loc>
-    <lastmod>2024-05-16</lastmod>
+    <lastmod>2024-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
