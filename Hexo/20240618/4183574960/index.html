@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"smalljiefrontend.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="前言此章節將開始教學，如何將Hexo生成好的靜態檔案上傳到GitHub Pages。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="試著用Hexo架設Blog-(5)-部署部落格">
+<meta property="og:url" content="https://smalljiefrontend.com/Hexo/20240618/4183574960/index.html">
+<meta property="og:site_name" content="Smalljie的前端探索">
+<meta property="og:description" content="前言此章節將開始教學，如何將Hexo生成好的靜態檔案上傳到GitHub Pages。">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/smalljieblog.appspot.com/o/Hexo%2F2024061801%2F%E5%BB%BA%E7%AB%8B%E5%84%B2%E5%AD%98%E5%BA%AB.png?alt=media&token=e00379c7-c457-49c1-ba6d-59f4c6984f00">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/smalljieblog.appspot.com/o/Hexo%2F2024061801%2F%E5%BB%BA%E7%AB%8B%E5%84%B2%E5%AD%98%E5%BA%AB(%E6%88%90%E5%8A%9F).png?alt=media&token=b3088bf5-c474-4942-975f-6558fb2cc91d">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/smalljieblog.appspot.com/o/Hexo%2F2024061801%2F%E5%A5%97%E4%BB%B6%E8%A8%AD%E5%AE%9A.png?alt=media&token=5c807a64-13ef-4d7e-8973-14886c123a8c">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/smalljieblog.appspot.com/o/Hexo%2F2024061801%2F%E9%83%A8%E5%B1%AC%E6%88%90%E5%8A%9F.png?alt=media&token=e065b47d-e1ef-4595-a1e2-1e43d9160f18">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/smalljieblog.appspot.com/o/Hexo%2F2024061801%2F%E8%B7%AF%E5%BE%91.png?alt=media&token=37634d3d-499c-4cb7-984c-f3d8dfb17923">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/smalljieblog.appspot.com/o/Hexo%2F2024061801%2F%E9%83%A8%E5%B1%AC%E6%88%90%E5%8A%9F(%E7%B6%B2%E9%A0%81).png?alt=media&token=d35e1bbf-c16b-43f0-9406-73efe6fd0b14">
+<meta property="article:published_time" content="2024-06-18T07:09:27.000Z">
+<meta property="article:modified_time" content="2024-06-18T07:09:27.000Z">
+<meta property="article:author" content="Smalljie">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/smalljieblog.appspot.com/o/Hexo%2F2024061801%2F%E5%BB%BA%E7%AB%8B%E5%84%B2%E5%AD%98%E5%BA%AB.png?alt=media&token=e00379c7-c457-49c1-ba6d-59f4c6984f00">
+
+<link rel="canonical" href="https://smalljiefrontend.com/Hexo/20240618/4183574960/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>試著用Hexo架設Blog-(5)-部署部落格 | Smalljie的前端探索</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Smalljie的前端探索" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Smalljie的前端探索</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">網頁開發與前端技術的探索之旅</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories" rel="section"><i class="fa fa-th fa-fw fa-fw"></i>分類</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/smalljie373" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://smalljiefrontend.com/Hexo/20240618/4183574960/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Smalljie">
+      <meta itemprop="description" content="F2E-Front End Engineer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smalljie的前端探索">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          試著用Hexo架設Blog-(5)-部署部落格
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2024-06-18 15:09:27" itemprop="dateCreated datePublished" datetime="2024-06-18T15:09:27+08:00">2024-06-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>此章節將開始教學，如何將Hexo生成好的靜態檔案上傳到GitHub Pages。</p>
+<span id="more"></span>
+
+<h2 id="什麼是GitHub-Pages"><a href="#什麼是GitHub-Pages" class="headerlink" title="什麼是GitHub Pages"></a>什麼是GitHub Pages</h2><p>在開始部屬之前，先來簡單介紹一下，什摩是<code>GitHub</code>和<code>GitHub Pages</code>。</p>
+<h3 id="GitHub-簡介"><a href="#GitHub-簡介" class="headerlink" title="GitHub 簡介"></a>GitHub 簡介</h3><p>GitHub 是一個基於雲端的版本控制和協作平台，專門針對軟體開發項目。以下是 GitHub 的一些主要功能和特點：</p>
+<ul>
+<li>版本控制：使用 Git 版本控制系統，開發者可以管理和跟踪代碼的更改。</li>
+<li>協作：多個開發者可以在同一個項目上同時工作，通過 <code>pull requests</code>、<code>issues</code> 和 <code>discussions</code> 進行溝通和協作。</li>
+<li>代碼儲存庫：用戶可以創建公共或私有的儲存庫（repositories）來存儲和管理代碼。</li>
+<li>分支和合併：開發者可以創建分支（branches）來開發新功能，測試完成後再合併到主分支。</li>
+<li>持續整合與部署：集成各種 CI&#x2F;CD 工具來自動化測試和部署過程。</li>
+</ul>
+<h3 id="GitHub-Pages-簡介"><a href="#GitHub-Pages-簡介" class="headerlink" title="GitHub Pages 簡介"></a>GitHub Pages 簡介</h3><p>GitHub Pages 是 GitHub 提供的一項靜態網站託管服務，允許用戶從他們的 GitHub 儲存庫中直接部署網站。以下是 GitHub Pages 的一些主要功能和特點：</p>
+<ul>
+<li>簡單部署：用戶只需將 HTML、CSS 和 JavaScript 文件推送到特定的儲存庫分支（如 gh-pages 或 main），網站就會自動部署。</li>
+<li>自定義域名：支持綁定自定義域名，讓用戶的網站看起來更專業。</li>
+<li>免費託管：對於公共儲存庫，GitHub Pages 提供免費的網站託管服務。</li>
+<li>自動生成：支持使用 Jekyll 等靜態網站生成器來生成網站內容，適合用於博客、文檔和個人網站。</li>
+<li>開發者友好：對於開發者來說，使用熟悉的 Git 流程來管理和部署網站內容，非常方便。</li>
+</ul>
+<h2 id="為什麼選擇GitHub-Pages"><a href="#為什麼選擇GitHub-Pages" class="headerlink" title="為什麼選擇GitHub Pages?"></a>為什麼選擇GitHub Pages?</h2><p>把 <code>GitHub Pages</code> 用於部落格，不僅可以免費使用空間，還有其他一些好處。例如，<code>GitHub Pages</code> 提供免費的 HTTPS。如果你是自己架設網站，生成 SSL 證書會相對麻煩且需要額外的費用和技術知識。而在 <code>GitHub Pages</code> 上，HTTPS 設置是自動完成的，無需手動配置，這樣就能確保網站安全和訪問者的數據保護。</p>
+<p>好處說完了，那限制呢?</p>
+<ul>
+<li>GitHub Pages 儲存庫大小限制在 1 GB，發布的 GitHub Pages 內容不得超過 1 GB</li>
+<li>GitHub Pages 站點流量每月是 100 GB</li>
+<li>GitHub Pages 每小時可接受的更新是 10 個版本</li>
+<li>GitHub Pages 僅支持靜態內容，這意味著無法直接運行伺服器端代碼（如 PHP、Node.js、Python 等）。這使得無法使用伺服器端的動態功能，例如後端數據庫訪問或伺服器端表單處理。</li>
+</ul>
+<h3 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h3><p>GitHub Pages 是一個非常適合小型靜態網站、個人博客和項目的託管解決方案，但其限制也需要考慮。特別是對於需要後端功能、大量流量或高級自定義配置的網站，可能需要尋找其他更適合的託管服務。</p>
+<h2 id="建立-GitHub-Pages-儲存庫"><a href="#建立-GitHub-Pages-儲存庫" class="headerlink" title="建立 GitHub Pages 儲存庫"></a>建立 GitHub Pages 儲存庫</h2><p>首先，請先到 <code>GitHub</code> <a target="_blank" rel="noopener" href="https://github.com/signup">註冊帳號</a>。如果你已經有 <code>GitHub</code> 帳號，則可以直接繼續下一步，開始建立自己的部落格儲存庫。</p>
+<p>首先請先新增一個儲存庫<a target="_blank" rel="noopener" href="https://github.com/new">點我</a></p>
+<p><img src="https://firebasestorage.googleapis.com/v0/b/smalljieblog.appspot.com/o/Hexo%2F2024061801%2F%E5%BB%BA%E7%AB%8B%E5%84%B2%E5%AD%98%E5%BA%AB.png?alt=media&token=e00379c7-c457-49c1-ba6d-59f4c6984f00" alt="建立儲存庫"></p>
+<p>欄位介紹:</p>
+<ul>
+<li>Repository name(儲存庫名稱):此欄位請輸入<code>[你的 GitHub 帳號].github.io</code>，因為我已經有創建自己的儲存庫，所以這邊使用<code>coffeeBlog.github.io</code>，當作範例。</li>
+<li>Description(說明):這邊就隨便填寫</li>
+<li>儲存庫類型，請選擇 Public，如果選 Private 就無法使用</li>
+</ul>
+<p><img src="https://firebasestorage.googleapis.com/v0/b/smalljieblog.appspot.com/o/Hexo%2F2024061801%2F%E5%BB%BA%E7%AB%8B%E5%84%B2%E5%AD%98%E5%BA%AB(%E6%88%90%E5%8A%9F).png?alt=media&token=b3088bf5-c474-4942-975f-6558fb2cc91d" alt="建立完成"></p>
+<p>出現以上畫面，就表示建立好囉~</p>
+<h2 id="安裝部署套件"><a href="#安裝部署套件" class="headerlink" title="安裝部署套件"></a>安裝部署套件</h2><p>因為Hexo本身並沒有預載一鍵部署的功能，所以需要額外安裝套件。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>安裝完畢後，打開 Hexo 的 <code>hexo/_config.yml（注意，不是主題的_config.yml）</code>，並在文件的結尾處加入以下內容：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/smalljie373/coffeeBlog.github.io.git</span> <span class="comment"># https://github.com/[你的 GitHub 帳號]/[你的 GitHub 帳號].github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">gh-pages</span> <span class="comment"># 在這邊我是使用 gh-pages 當作主要分支</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">&#x27;ithelpt&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/smalljieblog.appspot.com/o/Hexo%2F2024061801%2F%E5%A5%97%E4%BB%B6%E8%A8%AD%E5%AE%9A.png?alt=media&token=5c807a64-13ef-4d7e-8973-14886c123a8c" alt="套件設定"></p>
+<p>到這裡還需要將第16行的<code>url</code>，設定成剛剛建立 GitHub 儲存庫的 <code>Url</code>，否則是有可能發生一些問題的，假使你剛剛建立的儲存庫是 coffeeBlog.github.io，那麼就需要修改成以下:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://smalljie373.github.io/coffeeBlog.github.io/</span> <span class="comment"># 請小心後面不要多一個「/」否則會出現問題</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="部屬部落格"><a href="#部屬部落格" class="headerlink" title="部屬部落格"></a>部屬部落格</h2><p>安裝並設定完要上傳的儲存庫位置後，最後一個步驟就是將Hexo生成的靜態檔案部署到 GitHub 上</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://firebasestorage.googleapis.com/v0/b/smalljieblog.appspot.com/o/Hexo%2F2024061801%2F%E9%83%A8%E5%B1%AC%E6%88%90%E5%8A%9F.png?alt=media&token=e065b47d-e1ef-4595-a1e2-1e43d9160f18" alt="部屬成功"></p>
+<p>出現上述的畫面，就先恭喜你，成功部屬你的部落格到<code>GitHub Pages</code>上摟~</p>
+<p>隨後可以在<code>Settings -&gt; Pages</code>看到部屬完成的網址，輸入後就可以看到部屬的部落格。</p>
+<p><img src="https://firebasestorage.googleapis.com/v0/b/smalljieblog.appspot.com/o/Hexo%2F2024061801%2F%E8%B7%AF%E5%BE%91.png?alt=media&token=37634d3d-499c-4cb7-984c-f3d8dfb17923" alt="路徑"></p>
+<p><img src="https://firebasestorage.googleapis.com/v0/b/smalljieblog.appspot.com/o/Hexo%2F2024061801%2F%E9%83%A8%E5%B1%AC%E6%88%90%E5%8A%9F(%E7%B6%B2%E9%A0%81).png?alt=media&token=d35e1bbf-c16b-43f0-9406-73efe6fd0b14" alt="部屬成功網頁"></p>
+<p>今天就先到這，我們下一篇見。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Hexo/20240601/435691668/" rel="prev" title="試著用Hexo架設Blog(4)-常用的Hexo指令">
+      <i class="fa fa-chevron-left"></i> 試著用Hexo架設Blog(4)-常用的Hexo指令
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AFGitHub-Pages"><span class="nav-number">2.</span> <span class="nav-text">什麼是GitHub Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub-%E7%B0%A1%E4%BB%8B"><span class="nav-number">2.1.</span> <span class="nav-text">GitHub 簡介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub-Pages-%E7%B0%A1%E4%BB%8B"><span class="nav-number">2.2.</span> <span class="nav-text">GitHub Pages 簡介</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%BA%E4%BB%80%E9%BA%BC%E9%81%B8%E6%93%87GitHub-Pages"><span class="nav-number">3.</span> <span class="nav-text">為什麼選擇GitHub Pages?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number">3.1.</span> <span class="nav-text">總結</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B-GitHub-Pages-%E5%84%B2%E5%AD%98%E5%BA%AB"><span class="nav-number">4.</span> <span class="nav-text">建立 GitHub Pages 儲存庫</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D%E9%83%A8%E7%BD%B2%E5%A5%97%E4%BB%B6"><span class="nav-number">5.</span> <span class="nav-text">安裝部署套件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E5%B1%AC%E9%83%A8%E8%90%BD%E6%A0%BC"><span class="nav-number">6.</span> <span class="nav-text">部屬部落格</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Smalljie"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Smalljie</p>
+  <div class="site-description" itemprop="description">F2E-Front End Engineer</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/smalljie373" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;smalljie373" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">若要轉載文章，麻煩請保留原作者名稱(smalljie)與原始連結(url)。</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
